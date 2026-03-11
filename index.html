@@ -3,340 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Privacy Policy — Paw Wallet</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;1,300&family=DM+Sans:wght@300;400;500&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      :root {
-        --cream: #faf7f2;
-        --warm-white: #fff9f4;
-        --brown: #3d2b1f;
-        --amber: #c17f3a;
-        --amber-light: #e8a84e;
-        --sage: #6b8c6b;
-        --rust: #b85c38;
-        --muted: #8a7060;
-        --border: #e8ddd4;
-      }
-
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        background: var(--cream);
-        color: var(--brown);
-        font-family: "DM Sans", sans-serif;
-        font-weight: 300;
-        line-height: 1.8;
-        min-height: 100vh;
-      }
-
-      /* Decorative top band */
-      .top-band {
-        height: 4px;
-        background: linear-gradient(
-          90deg,
-          var(--amber) 0%,
-          var(--amber-light) 50%,
-          var(--rust) 100%
-        );
-      }
-
-      header {
-        background: var(--warm-white);
-        border-bottom: 1px solid var(--border);
-        padding: 3rem 2rem 2.5rem;
-        text-align: center;
-      }
-
-      .paw-icon {
-        font-size: 2.5rem;
-        display: block;
-        margin-bottom: 1rem;
-        animation: float 3s ease-in-out infinite;
-      }
-
-      @keyframes float {
-        0%,
-        100% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(-6px);
-        }
-      }
-
-      header h1 {
-        font-family: "Fraunces", serif;
-        font-size: clamp(2rem, 5vw, 3.2rem);
-        font-weight: 300;
-        letter-spacing: -0.02em;
-        color: var(--brown);
-      }
-
-      header h1 span {
-        color: var(--amber);
-        font-style: italic;
-      }
-
-      .subtitle {
-        margin-top: 0.5rem;
-        color: var(--muted);
-        font-size: 0.9rem;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-      }
-
-      /* Privacy badge */
-      .badge-row {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-        flex-wrap: wrap;
-        margin-top: 1.8rem;
-      }
-
-      .badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.4rem;
-        background: var(--cream);
-        border: 1px solid var(--border);
-        border-radius: 2rem;
-        padding: 0.35rem 0.9rem;
-        font-size: 0.8rem;
-        color: var(--sage);
-        font-weight: 500;
-      }
-
-      main {
-        max-width: 780px;
-        margin: 0 auto;
-        padding: 3rem 2rem 5rem;
-      }
-
-      /* Highlight box */
-      .highlight-box {
-        background: var(--warm-white);
-        border: 1px solid var(--border);
-        border-left: 4px solid var(--amber);
-        border-radius: 0 12px 12px 0;
-        padding: 1.6rem 2rem;
-        margin-bottom: 3rem;
-        font-family: "Fraunces", serif;
-        font-size: 1.15rem;
-        font-style: italic;
-        color: var(--brown);
-        font-weight: 300;
-      }
-
-      section {
-        margin-bottom: 2.8rem;
-        padding-bottom: 2.8rem;
-        border-bottom: 1px solid var(--border);
-      }
-
-      section:last-of-type {
-        border-bottom: none;
-      }
-
-      h2 {
-        font-family: "Fraunces", serif;
-        font-size: 1.5rem;
-        font-weight: 400;
-        color: var(--brown);
-        margin-bottom: 1.2rem;
-        display: flex;
-        align-items: center;
-        gap: 0.6rem;
-      }
-
-      h2 .section-icon {
-        font-size: 1.1rem;
-        background: var(--cream);
-        border: 1px solid var(--border);
-        width: 2rem;
-        height: 2rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        flex-shrink: 0;
-      }
-
-      h3 {
-        font-family: "Fraunces", serif;
-        font-size: 1.05rem;
-        font-weight: 400;
-        color: var(--amber);
-        margin: 1.4rem 0 0.6rem;
-      }
-
-      p {
-        margin-bottom: 1rem;
-        color: var(--brown);
-        font-size: 0.95rem;
-      }
-
-      ul,
-      ol {
-        padding-left: 1.4rem;
-        margin-bottom: 1rem;
-      }
-
-      li {
-        margin-bottom: 0.4rem;
-        font-size: 0.95rem;
-        color: var(--brown);
-      }
-
-      /* Permissions grid */
-      .permissions-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 1rem;
-        margin-top: 1rem;
-      }
-
-      .perm-card {
-        background: var(--warm-white);
-        border: 1px solid var(--border);
-        border-radius: 12px;
-        padding: 1.2rem;
-      }
-
-      .perm-card .perm-icon {
-        font-size: 1.4rem;
-        margin-bottom: 0.5rem;
-        display: block;
-      }
-      .perm-card strong {
-        font-family: "Fraunces", serif;
-        font-weight: 400;
-        display: block;
-        margin-bottom: 0.3rem;
-        color: var(--brown);
-      }
-      .perm-card p {
-        font-size: 0.85rem;
-        margin: 0;
-        color: var(--muted);
-        line-height: 1.5;
-      }
-
-      /* Do not do list */
-      .nope-list {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 0.6rem;
-        list-style: none;
-        padding: 0;
-        margin-top: 1rem;
-      }
-
-      .nope-list li {
-        background: var(--warm-white);
-        border: 1px solid var(--border);
-        border-radius: 8px;
-        padding: 0.5rem 0.8rem;
-        font-size: 0.85rem;
-        color: var(--rust);
-        display: flex;
-        align-items: center;
-        gap: 0.4rem;
-      }
-
-      /* Summary checkmarks */
-      .summary-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 0.7rem;
-        list-style: none;
-        padding: 0;
-        margin-top: 1rem;
-      }
-
-      .summary-grid li {
-        background: var(--warm-white);
-        border: 1px solid var(--border);
-        border-radius: 8px;
-        padding: 0.6rem 1rem;
-        font-size: 0.9rem;
-        color: var(--sage);
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        font-weight: 500;
-      }
-
-      a {
-        color: var(--amber);
-        text-decoration: none;
-        border-bottom: 1px solid transparent;
-        transition: border-color 0.2s;
-      }
-
-      a:hover {
-        border-color: var(--amber);
-      }
-
-      .contact-box {
-        background: var(--warm-white);
-        border: 1px solid var(--border);
-        border-radius: 12px;
-        padding: 1.5rem 2rem;
-        margin-top: 1rem;
-      }
-
-      .contact-box p {
-        margin: 0.2rem 0;
-        font-size: 0.9rem;
-      }
-
-      footer {
-        text-align: center;
-        padding: 2rem;
-        background: var(--warm-white);
-        border-top: 1px solid var(--border);
-        color: var(--muted);
-        font-size: 0.8rem;
-        letter-spacing: 0.04em;
-      }
-
-      @media (max-width: 600px) {
-        main {
-          padding: 2rem 1.2rem 3rem;
-        }
-        header {
-          padding: 2rem 1.2rem;
-        }
-      }
-    </style>
   </head>
   <body>
     <div class="top-band"></div>
 
+    <nav class="site-nav">
+      <a href="index.html" class="active">Privacy Policy</a>
+      <a href="support.html">Support</a>
+    </nav>
+
     <header>
-      <span class="paw-icon">🐾</span>
+      <div class="logo-wrap">
+        <img src="logo.png" alt="Paw Wallet" />
+      </div>
       <h1>Paw <span>Wallet</span></h1>
       <p class="subtitle">
-        Privacy Policy &nbsp;·&nbsp; Last Updated March 9, 2026
+        Privacy Policy &nbsp;&middot;&nbsp; Last Updated March 9, 2026
       </p>
       <div class="badge-row">
-        <span class="badge">✦ No data collected</span>
-        <span class="badge">✦ No account required</span>
-        <span class="badge">✦ No ads ever</span>
+        <span class="badge">No data collected</span>
+        <span class="badge">No account required</span>
+        <span class="badge">No ads ever</span>
       </div>
     </header>
 
     <main>
+      <div class="highlight-box">
+        "We do not collect, store, or transmit any of your personal data to
+        external servers."
+      </div>
+
+      <!-- Introduction -->
       <section>
-        <h2>Introduction</h2>
+        <h2><span class="section-rule"></span> Introduction</h2>
         <p>
           Paw Wallet is committed to protecting your privacy. This Privacy
           Policy explains how we handle information when you use our iOS
@@ -346,55 +47,53 @@
         </p>
       </section>
 
+      <!-- Data Storage -->
       <section>
-        <h2>Data Storage</h2>
-        <h3>What's stored locally on your device</h3>
+        <h2><span class="section-rule"></span> Data Storage</h2>
+        <h3>What is stored locally on your device</h3>
         <ul>
           <li>Pet profiles (names, species, breeds, photos)</li>
           <li>Health records (vaccines, vet visits, medical notes)</li>
           <li>Reminders and notifications</li>
           <li>Photos and document attachments</li>
-          <li>User preferences (language settings)</li>
+          <li>User preferences and language settings</li>
         </ul>
-        <h3>How it's stored</h3>
+        <h3>How it is stored</h3>
         <p>
           All data uses Apple's SwiftData framework, protected by your device's
-          security (passcode, Face ID, Touch ID). Data is included in your
-          device backups (iCloud or iTunes). We do not have access to your data
-          and cannot recover it if lost.
+          security — passcode, Face ID, or Touch ID. Data is included in your
+          device backups via iCloud or iTunes. We do not have access to your
+          data and cannot recover it if lost.
         </p>
       </section>
 
+      <!-- Permissions -->
       <section>
-        <h2>Permissions We Request</h2>
+        <h2><span class="section-rule"></span> Permissions We Request</h2>
         <div class="permissions-grid">
           <div class="perm-card">
-            <span class="perm-icon">📍</span>
-            <strong>Location Services</strong>
+            <span class="perm-label">Location Services</span>
             <p>
               Only to display nearby veterinary clinics. We never collect or
-              store your location. Map data provided by Apple Maps.
+              store your location. Map data is provided by Apple Maps.
             </p>
           </div>
           <div class="perm-card">
-            <span class="perm-icon">🖼️</span>
-            <strong>Photo Library</strong>
+            <span class="perm-label">Photo Library</span>
             <p>
               To add pet photos and save documents. Photos are never uploaded or
               transmitted — stored only on your device.
             </p>
           </div>
           <div class="perm-card">
-            <span class="perm-icon">📷</span>
-            <strong>Camera</strong>
+            <span class="perm-label">Camera</span>
             <p>
               To take photos of pets or documents in-app. Nothing is uploaded or
               transmitted anywhere.
             </p>
           </div>
           <div class="perm-card">
-            <span class="perm-icon">🔔</span>
-            <strong>Notifications</strong>
+            <span class="perm-label">Notifications</span>
             <p>
               For vaccine and appointment reminders. All notifications are local
               — generated on your device with no push servers.
@@ -402,8 +101,10 @@
           </div>
         </div>
       </section>
+
+      <!-- Third-Party Services -->
       <section>
-        <h2>Third-Party Services</h2>
+        <h2><span class="section-rule"></span> Third-Party Services</h2>
         <h3>Apple Maps</h3>
         <p>
           The "Find Vets" feature uses Apple Maps to display veterinary clinic
@@ -420,8 +121,9 @@
         </p>
       </section>
 
+      <!-- Data Export & Deletion -->
       <section>
-        <h2>Data Export & Deletion</h2>
+        <h2><span class="section-rule"></span> Data Export &amp; Deletion</h2>
         <h3>Exporting your data</h3>
         <p>
           You can export all your pet information at any time in PDF format
@@ -436,29 +138,41 @@
         </p>
       </section>
 
+      <!-- Children's Privacy -->
       <section>
-        <h2>Children's Privacy</h2>
+        <h2><span class="section-rule"></span> Children's Privacy</h2>
         <p>
           Paw Wallet does not knowingly collect information from children. The
-          app is rated 4+ and is safe for all ages. Since we don't collect any
-          data at all, there is no risk to children's privacy.
+          app is rated 4+ and is safe for all ages. Since we collect no data at
+          all, there is no risk to children's privacy.
         </p>
       </section>
 
+      <!-- Security -->
       <section>
-        <h2>Security</h2>
+        <h2><span class="section-rule"></span> Security</h2>
         <p>
           All data uses Apple's secure SwiftData framework and is protected by
           iOS security features. There is no network transmission of sensitive
-          data and no server-side vulnerabilities — because there's no server.
+          data and no server-side vulnerabilities — because there is no server.
         </p>
+      </section>
+
+      <!-- Contact -->
+      <section>
+        <h2><span class="section-rule"></span> Contact Us</h2>
+        <div class="contact-box">
+          <p>Questions about this Privacy Policy or Paw Wallet?</p>
+          <p><strong>Email:</strong> hackertwinone@gmail.com</p>
+        </div>
       </section>
     </main>
 
     <footer>
-      Paw Wallet &nbsp;·&nbsp; Version 1.0 &nbsp;·&nbsp; Effective March 9,
-      2026<br />
-      Compliant with GDPR · CCPA · COPPA · Apple App Store Guidelines
+      Paw Wallet &nbsp;&middot;&nbsp; Version 1.0 &nbsp;&middot;&nbsp; Effective
+      March 9, 2026<br />
+      Compliant with GDPR &middot; CCPA &middot; COPPA &middot; Apple App Store
+      Guidelines
     </footer>
   </body>
 </html>
